@@ -1,24 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GreatNumberGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="O65-Lu-ui5">
+                                <rect key="frame" x="50" y="69" width="275" height="167"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a guess!!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueK-Ku-xog">
+                                        <rect key="frame" x="88.666666666666657" y="138.66666666666666" width="108.33333333333334" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Im thinking of a number between 1 and 100" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lP9-6d-pUR">
+                                        <rect key="frame" x="4" y="78.666666666666657" width="277.33333333333331" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to The Great Number Game" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8t-Fb-8mN">
+                                        <rect key="frame" x="1" y="15.999999999999998" width="296" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="k8t-Fb-8mN" firstAttribute="leading" secondItem="O65-Lu-ui5" secondAttribute="leading" constant="1" id="4gp-9C-KzQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="k8t-Fb-8mN" secondAttribute="trailing" constant="-22" id="5wA-Bs-UL4"/>
+                                    <constraint firstAttribute="width" constant="275" id="T21-tC-ukf"/>
+                                    <constraint firstItem="lP9-6d-pUR" firstAttribute="top" secondItem="k8t-Fb-8mN" secondAttribute="bottom" constant="42.333333333333329" id="VOU-7q-rDa"/>
+                                    <constraint firstItem="lP9-6d-pUR" firstAttribute="leading" secondItem="O65-Lu-ui5" secondAttribute="leading" constant="4" id="eeh-Dd-1ea"/>
+                                    <constraint firstItem="ueK-Ku-xog" firstAttribute="top" secondItem="lP9-6d-pUR" secondAttribute="bottom" constant="42.999999999999972" id="ejx-D5-q3x"/>
+                                    <constraint firstItem="lP9-6d-pUR" firstAttribute="centerX" secondItem="ueK-Ku-xog" secondAttribute="centerX" id="tEg-4Y-h1y"/>
+                                    <constraint firstItem="lP9-6d-pUR" firstAttribute="top" secondItem="O65-Lu-ui5" secondAttribute="top" constant="78.666666666666657" id="va5-cb-aKf"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter a number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5PC-lX-IaS">
+                                <rect key="frame" x="112.66666666666669" y="364" width="150" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Vj6-BZ-COa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="textFieldContent:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="188-AA-hJI"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilI-e9-6vg">
+                                <rect key="frame" x="112.66666666666669" y="447" width="150" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="BJ9-06-TgC"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Submit"/>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="55U-HA-95a"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ilI-e9-6vg" secondAttribute="bottom" constant="300" id="7xo-Lh-r2l"/>
+                            <constraint firstItem="5PC-lX-IaS" firstAttribute="centerX" secondItem="ilI-e9-6vg" secondAttribute="centerX" id="GyZ-i9-Fql"/>
+                            <constraint firstItem="5PC-lX-IaS" firstAttribute="top" secondItem="O65-Lu-ui5" secondAttribute="bottom" constant="128" id="W2S-HC-Rbk"/>
+                            <constraint firstItem="ilI-e9-6vg" firstAttribute="top" secondItem="5PC-lX-IaS" secondAttribute="bottom" constant="49" id="gW8-Q9-aoJ"/>
+                            <constraint firstItem="O65-Lu-ui5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="vFs-hM-aFG"/>
+                            <constraint firstItem="O65-Lu-ui5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yKb-0Z-3rN"/>
+                            <constraint firstItem="5PC-lX-IaS" firstAttribute="top" secondItem="O65-Lu-ui5" secondAttribute="bottom" constant="128" id="zR5-4Q-CM1"/>
+                            <constraint firstItem="ilI-e9-6vg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zX9-zQ-dow"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="numberTextField" destination="5PC-lX-IaS" id="PS8-Cn-i7w"/>
+                        <outlet property="submitButton" destination="ilI-e9-6vg" id="etm-Hj-ybJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-127.2" y="-44.334975369458128"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
