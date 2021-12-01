@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var numberTextField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
     
-    let randomNumber = Int.random(in: 1...100)
+    var randomNumber = Int.random(in: 1...100)
   
     @IBAction func textFieldContent(_ sender: UITextField) {
     }
@@ -38,8 +38,9 @@ class ViewController: UIViewController {
         let alert = UIAlertController(title: "Correct", message: "\(numberTextField.text!) was correct!!!", preferredStyle: .alert)
         alert.view.tintColor = UIColor.black
         alert.view.backgroundColor = UIColor.green
-        alert.addAction(UIAlertAction(title: "Play again", style: .cancel, handler: { action in
+        alert.addAction(UIAlertAction(title: "Play again", style: .cancel, handler: { [self] action in
             print("Correct")
+            randomNumber.self = Int.random(in: 1...100)
         }))
         present(alert, animated: true)
     }
